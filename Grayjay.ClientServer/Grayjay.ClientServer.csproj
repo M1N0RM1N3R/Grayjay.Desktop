@@ -71,7 +71,10 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Grayjay.Engine\Grayjay.Engine\Grayjay.Engine.csproj" />
+    <PackageReference Include="Grayjay.Engine" Version="*" Condition=" '$(ContinuousIntegrationBuild)'=='true' "/>
+
     <ProjectReference Include="..\FUTO.MDNS\FUTO.MDNS\FUTO.MDNS.csproj" />
+    <PackageReference Include="FUTO.MDNS" Version="*" Condition=" '$(ContinuousIntegrationBuild)'=='true' "/>
   </ItemGroup>
 
   <ItemGroup>

@@ -49,7 +49,10 @@
 
   <ItemGroup>
     <ProjectReference Include="..\JustCef\DotCef.csproj" />
+    <PackageReference Include="DotCef" Version="*" Condition=" '$(ContinuousIntegrationBuild)'=='true' "/>
+
     <ProjectReference Include="..\Grayjay.ClientServer\Grayjay.ClientServer.csproj" />
+    <PackageReference Include="Grayjay.ClientServer" Version="*" Condition=" '$(ContinuousIntegrationBuild)'=='true' "/>
   </ItemGroup>
 
 </Project>
